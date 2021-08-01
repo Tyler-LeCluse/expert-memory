@@ -72,7 +72,6 @@ app.get('/:customListName', (req, res) => {
         });
         list.save();
         res.render('list', {listTitle: list.name, newListItems: list.items});
-        // res.redirect('/' + customListName);
        } else {
          res.render('list', {listTitle: foundList.name, newListItems: foundList.items});
        }
